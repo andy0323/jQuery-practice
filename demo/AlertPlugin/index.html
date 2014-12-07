@@ -4,14 +4,25 @@
 	<meta charset="UTF-8">
 	<title>Alert Plugin</title>
 	<script type="text/javascript" src='../../lib/jquery.js'></script>
-	<script type="text/javascript" src='AlertPlugin.js'></script>
+	<script type="text/javascript" src='alertPlugin.js'></script>
 	<script>
-		$(function(){
-			var target = $('.alert').addTouchEventAlert();
 
+		$(function(){
+			$('.alert').onClickEventAlert({
+				eventType : 'alert',
+				message:'Hello World'
+			});
+		});
+
+		$(function(){
+			$('.log').onClickEventAlert({
+				eventType : 'log',
+				message:'Hello World'
+			});
 		});
 	</script>
 </head>
 <body>
-	<input class="alert" type="button" value="提示">
+	<input class="alert" type="button" value="弹出警告框">
+	<input class="log" type="button" value="控制台输出">
 </html>
