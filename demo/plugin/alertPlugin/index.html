@@ -3,18 +3,18 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Alert Plugin</title>
-	<script type="text/javascript" src='../../lib/jquery.js'></script>
-	<script type="text/javascript" src='alertPlugin.js'></script>
+	<script type="text/javascript" src='../../../lib/jquery.js'></script>
+	<script type="text/javascript" src='src/alertPlugin.js'></script>
 	<script>
 
 		$(function(){
+			// 注册警告框
 			$('.alert').onClickEventAlert({
 				eventType : 'alert',
 				message:'Hello World'
 			});
-		});
 
-		$(function(){
+			// 注册后台输出
 			$('.log').onClickEventAlert({
 				eventType : 'log',
 				message:'Hello World'

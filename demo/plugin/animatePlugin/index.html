@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Animate Plugin</title>
+	<link rel="stylesheet" href="css/animatePlugin.css">	
+	<script type="text/javascript" src='../../../lib/jquery.js'></script>
+	<script type="text/javascript" src='src/animatePlugin.js'></script>
+	<script>
+		$(function() {
+			var view = $('.view').registAtionMove();
+			
+			$('.hidden').click(function(){
+				view.hidden();
+			});
+			
+			$('.show').click(function(){
+				view.show();
+			});
+		});
+	</script>
+</head>
+<body>
+	<div class='view'></div>
+	<button class='hidden'> 方块消失 </button>
+	<button class='show'> 方块出现 </button>
+</body>
+</html>
