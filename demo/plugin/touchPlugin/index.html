@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Css手势插件</title>
+	<style>
+		.box{
+			height: 100px;
+			width : 100px;
+			background-color: red;
+			margin-bottom: 10px;
+		}
+	</style>
+	<script type="text/javascript" src='../../../lib/jquery.js'></script>
+	<script type="text/javascript" src='src/touchPligin.js'></script>
+	<script>
+		$(function() {
+
+			// 默认配置
+			var defaultConf = {};
+
+			// 点击事件配置
+			var touchConf = {
+				eventType: 'touch',
+				touchMethod: function(){ alert('响应点击事件') }
+			};
+
+			// 鼠标移入移出配置
+			var moveConf = {
+				eventType: 'move',
+				mouseEnterMethod : function(){ alert('响应鼠标移入');},
+				mouseLeaveMethod : function(){ alert('响应鼠标移出');}
+			};
+
+			// 鼠标拖拽
+			var drogConf = {
+				eventType: 'drog',
+				drogBegainMethod : function(){ console.log('开始拖拽');},
+				drogDuringMethod : function(){ console.log('进行拖拽');},	
+				drogFinishMethod : function(){ console.log('结束拖拽');}
+			};
+
+			$('.box').addGesture(drogConf);
+		});
+
+	</script>
+</head>
+<body>
+	<div class="box"></div>
+</body>
+</html>
